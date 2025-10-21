@@ -1,0 +1,63 @@
+<html>
+<body>
+<style>
+   body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: white;
+      margin: 0;
+    }
+
+    
+    .box {
+      background-color: black;
+      width: 400px;
+      height: 400px;
+      text-align: center;
+      color: white;
+      padding-top: 20px;
+     
+    }
+
+    
+    button {
+      background-color: yellow;
+    
+      padding: 10px 20px;
+      margin: 5px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+</style>
+
+
+
+<script>
+
+function light(c) {
+  var pic;
+  if (c == 0) {
+    pic = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHJD_FmbI-JvP98QgJM-WDGM3uz1SMR8UJv2N5zNv_B4WDbAz9yN7O8amLjaRrhz61c7s&usqp=CAU"
+  } else {
+    pic = "https://i.pinimg.com/originals/df/30/ce/df30ce307f9cfe83914bd0bb0f6c5ed1.gif"
+  }
+  document.getElementById('myImage').src = pic;
+}
+</script>
+<div  class="box">
+<center>
+<h2>LIGHT BULB</h2>
+<img id="myImage" src="bulboff.gif" width="100" height="180">
+
+<p>
+<button type="button" onclick="light(1)">Light On</button>
+<button type="button" onclick="light(0)">Light Off</button>
+</p>
+</center>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+<head>
+<style>
+body{
+display:flex;
+justify-content:center;
+align-items:center;
+}
+button{
+font-size:1rem;
+background-color:black;
+color:white;
+}
+</style>
+</head>
+<body>
+<button id="change">CLICK</button>
+<script>
+let bgcolor= document.getElementById('change');
+bgcolor.addEventListener('click',function(){
+document.body.style.background="green";
+})
+bgcolor.addEventListener('dblclick',function(){
+document.body.style.background="red";
+})
+</script>
+</body>
+</html>
+
