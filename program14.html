@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>String and Math Functions in JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef4fb;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #0a4a80;
+        }
+        .box {
+            background: #ffffff;
+            padding: 20px;
+            margin-top: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        button {
+            background-color: #007bff;
+            border: none;
+            padding: 10px 15px;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 6px;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #005fcc;
+        }
+        #output1, #output2 {
+            background: #e6f4ff;
+            padding: 10px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>String and Math Functions in JavaScript</h1>
+
+    <div class="box">
+        <h2>1️⃣ String Functions</h2>
+        <p>JavaScript provides many predefined string functions for text manipulation.</p>
+
+<pre>
+// Example String
+let text = " Hello JavaScript! ";
+
+// Common String Functions
+text.length         // Returns string length
+text.toUpperCase()  // Converts to uppercase
+text.toLowerCase()  // Converts to lowercase
+text.trim()         // Removes spaces from both ends
+text.charAt(6)      // Character at position 6
+text.indexOf("Script")  // Finds position of substring
+text.replace("Java", "ECMA") // Replaces text
+text.slice(1, 5)    // Extracts part of string
+text.concat(" is awesome!") // Joins strings
+</pre>
+
+        <button onclick="runStringFunctions()">Run String Functions</button>
+        <div id="output1"></div>
+    </div>
+
+    <div class="box">
+        <h2>2️⃣ Math Functions</h2>
+        <p>JavaScript's Math object provides mathematical constants and functions.</p>
+
+<pre>
+// Common Math Functions
+Math.PI         // Value of π
+Math.sqrt(25)   // Square root
+Math.pow(2, 3)  // 2³
+Math.abs(-10)   // Absolute value
+Math.ceil(4.3)  // Round up
+Math.floor(4.9) // Round down
+Math.round(4.5) // Nearest integer
+Math.random()   // Random (0 to 1)
+Math.max(10,20,30) // Largest number
+Math.min(10,20,30) // Smallest number
+</pre>
+
+        <button onclick="runMathFunctions()">Run Math Functions</button>
+        <div id="output2"></div>
+    </div>
+
+    <script>
+        function runStringFunctions() {
+            let text = " Hello JavaScript! ";
+            let result = "";
+            result += "Original String: " + text + "\n";
+            result += "Length: " + text.length + "\n";
+            result += "Uppercase: " + text.toUpperCase() + "\n";
+            result += "Lowercase: " + text.toLowerCase() + "\n";
+            result += "Trimmed: " + text.trim() + "\n";
+            result += "Character at 6: " + text.charAt(6) + "\n";
+            result += "Index of 'Script': " + text.indexOf("Script") + "\n";
+            result += "Replace: " + text.replace("Java", "ECMA") + "\n";
+            result += "Slice(1,5): " + text.slice(1, 5) + "\n";
+            result += "Concat: " + text.concat(" is awesome!") + "\n";
+            document.getElementById("output1").innerText = result;
+        }
+
+        function runMathFunctions() {
+            let result = "";
+            result += "PI: " + Math.PI + "\n";
+            result += "Square Root of 25: " + Math.sqrt(25) + "\n";
+            result += "2³: " + Math.pow(2, 3) + "\n";
+            result += "|-10| = " + Math.abs(-10) + "\n";
+            result += "Ceil(4.3): " + Math.ceil(4.3) + "\n";
+            result += "Floor(4.9): " + Math.floor(4.9) + "\n";
+            result += "Round(4.5): " + Math.round(4.5) + "\n";
+            result += "Random(0-1): " + Math.random() + "\n";
+            result += "Max(10,20,30): " + Math.max(10, 20, 30) + "\n";
+            result += "Min(10,20,30): " + Math.min(10, 20, 30) + "\n";
+            document.getElementById("output2").innerText = result;
+        }
+    </script>
+
+</body>
+</html>
