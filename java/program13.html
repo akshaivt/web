@@ -1,63 +1,73 @@
 <html>
-<body>
-<style>
-   body {
+<head>
+  <title>Light Bulb</title>
+  <style>
+    body {
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      background-color: white;
       margin: 0;
+      background: white;
+      font-family: Arial, sans-serif;
     }
-
-    
     .box {
-      background-color: black;
-      width: 400px;
-      height: 400px;
+      background: #000;
+      color: #fff;
+      padding: 30px;
+      border-radius: 15px;
       text-align: center;
-      color: white;
-      padding-top: 20px;
-     
+      width: 400px;
     }
-
-    
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    img {
+      width: 200px;
+      height: 350px;
+      margin: 20px 0;
+    }
     button {
-      background-color: yellow;
-    
-      padding: 10px 20px;
-      margin: 5px;
-      border-radius: 5px;
-      font-weight: bold;
+      background: yellow;
+      color: #000;
+      border: none;
+      padding: 15px 25px;
+      margin: 10px;
+      border-radius: 8px;
       cursor: pointer;
+      font-weight: bold;
+      font-size: 1.2rem;
     }
-</style>
+    button:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
 
+  <div class="box">
+    <h2>LIGHT BULB</h2>
+    <img id="bulbImage" src="https://i.pinimg.com/564x/e0/fd/25/e0fd25f9127a9a109a0648c83ee61643.jpg" alt="Bulb Off">
+    <div>
+      <button onclick="switchBulb(true)">Turn On</button>
+      <button onclick="switchBulb(false)">Turn Off</button>
+    </div>
+  </div>
 
-
-<script>
-
-function light(c) {
-  var pic;
-  if (c == 0) {
-    pic = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHJD_FmbI-JvP98QgJM-WDGM3uz1SMR8UJv2N5zNv_B4WDbAz9yN7O8amLjaRrhz61c7s&usqp=CAU.gif"
-  } else {
-    pic = "https://i.gifer.com/H90l.gif"
-  }
-  document.getElementById('myImage').src = pic;
-}
-</script>
-<div  class="box">
-<center>
-<h2>LIGHT BULB</h2>
-<img id="myImage" src="bulboff.gif" width="100" height="180">
-
-<p>
-<button type="button" onclick="light(1)">Light On</button>
-<button type="button" onclick="light(0)">Light Off</button>
-</p>
-</center>
-</div>
+  <script>
+    function switchBulb(isOn) {
+      const img = document.getElementById('bulbImage');
+      if (isOn) {
+        img.src = "https://i.pinimg.com/originals/f9/6b/30/f96b30c7e603c9404fd8374f7434815d.gif";
+        img.alt = "Bulb On";
+      } else {
+        img.src = "https://i.pinimg.com/564x/e0/fd/25/e0fd25f9127a9a109a0648c83ee61643.jpg";
+        img.alt = "Bulb Off";
+      }
+    }
+  </script>
 
 </body>
 </html>
+
